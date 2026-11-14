@@ -1,0 +1,11 @@
+# Netlify 部署配置（拖拽部署时自动读取）
+[build]
+  # 发布目录 = 当前文件夹（拖拽上传的包根）
+  publish = "."
+
+# 单页应用回退：所有未知路径都返回 index.html
+# 本 H5 使用 #hash 路由（如 #d=... 数据交接），此规则主要作保险
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
